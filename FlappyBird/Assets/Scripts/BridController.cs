@@ -5,7 +5,7 @@ public class BridController : MonoBehaviour {
 	//帧数计数器
 	public int frameCount = 0;
     // fram number one seconds 每秒显示帧数
-    public int frameNumber = 10;
+    public int frameNumber = 15;
     //时间计数器 通过时间流逝判断当前是第几帧。
     public float timer;
     // Use this for initialization
