@@ -39,17 +39,7 @@ public class PipeController : MonoBehaviour {
         GUILayout.Label("Score:" + GameManager._intance.totalScore);
     }
 
-    //碰撞检测
-    private void OnCollisionEnter(Collision collision)
-    {
-        print("OnCollisionEnter");
-        if(collision.gameObject.tag == "Player"){
-
-            GameManager._intance.GameStatus = GameManager.GAMESTATUS_END;
-
-        }
-    }
-
+   
 
 
 }

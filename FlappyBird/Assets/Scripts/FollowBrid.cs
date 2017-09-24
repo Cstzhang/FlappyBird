@@ -14,6 +14,18 @@ public class FollowBrid : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Vector3 bridPos = brid.transform.position;
-        this.transform.position = new Vector3(bridPos.x + 3.6332f, bridPos.y - 3.5088f, -10);
+        float y = bridPos.y - 3.5088f;
+        if(y >2.4f){
+            y = 2.4f;
+        }
+
+		if (y < - 2.4f)
+		{
+			y = -2.4f;
+		}
+
+
+
+        this.transform.position = new Vector3(bridPos.x + 3.6332f, y, -10);
 	}
 }
