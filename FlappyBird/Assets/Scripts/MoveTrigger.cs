@@ -5,7 +5,6 @@ public class MoveTrigger : MonoBehaviour {
     public Transform currentBg;
     public PipeController pipe1;
 	public PipeController pipe2;
-
     //当一个碰撞去进入碰撞去
     public void OnTriggerEnter(Collider other)
     {

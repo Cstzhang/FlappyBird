@@ -10,12 +10,16 @@ public class BridController : MonoBehaviour {
     public float timer;
     // Use this for initialization
 	void Start () {
-        //初始速度
-        this.GetComponent<Rigidbody>().velocity = new Vector3(5, 0, 0);
+		//初试速度
+		this.GetComponent<Rigidbody>().velocity = new Vector3(2, 0, 0);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		//向左速度
+		//Vector3 vel = this.GetComponent<Rigidbody>().velocity;
+        //this.GetComponent<Rigidbody>().velocity = new Vector3(5, vel.y, vel.z);
+        // aniamtion
         timer += Time.deltaTime;
         if(timer >= 1.0f / frameNumber){
             frameCount++;//帧数加一
@@ -26,8 +30,22 @@ public class BridController : MonoBehaviour {
 			// how to set the property offset "_MainTex",new Vector2(0.33333f * frameIndex,0)
             this.GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(0.33333f * frameIndex, 0));
         }
-	
+
+        //control jump
+        if (Input.GetMouseButton(0)) {//lett mause bt down
+            Vector3 vel2 = this.GetComponent<Rigidbody>().velocity;
+            // 加一个向上的速度
+            this.GetComponent<Rigidbody>().velocity = new Vector3(vel2.x, 5, vel2.z);
+		};
+
+
+
+
 	}
+
+
+
+
 
 
 }
