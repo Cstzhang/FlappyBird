@@ -10,7 +10,8 @@ public class BridController : MonoBehaviour {
     public float timer;
     // Use this for initialization
 	void Start () {
-	
+        //初始速度
+        this.GetComponent<Rigidbody>().velocity = new Vector3(5, 0, 0);
 	}
 	
 	// Update is called once per frame
