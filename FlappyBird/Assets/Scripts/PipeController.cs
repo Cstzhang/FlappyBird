@@ -25,7 +25,6 @@ public class PipeController : MonoBehaviour {
     //经过触发器后计分
     private void OnTriggerExit(Collider other) {
         if(other.tag == "Player"){
-
             GameManager._intance.totalScore++;
             this.GetComponent<AudioSource>().Play();
         }
@@ -34,10 +33,10 @@ public class PipeController : MonoBehaviour {
     }
 
     //显示分数
-    private void OnGUI()
-    {
-        GUILayout.Label("Score:" + GameManager._intance.totalScore);
-    }
+    //private void OnGUI()
+    //{
+    //    GUILayout.Label("Score:" + GameManager._intance.totalScore);
+    //}
 
    
 

@@ -20,12 +20,12 @@ public class PipeCollision : MonoBehaviour {
 		print("OnCollisionEnter");
 		if (collision.gameObject.tag == "Player")
 		{
-
+			hitMusic.Play();
+			dieMusic.Play();
 			GameManager._intance.GameStatus = GameManager.GAMESTATUS_END;
 
             //this.GetComponent<AudioSource>().Play();
-            hitMusic.Play();
-            dieMusic.Play();
+         
 		}
 	}
 

@@ -38,8 +38,14 @@ public class GameManager : MonoBehaviour {
 
         }
 
+        //显示
+        if(GameStatus == GameManager.GAMESTATUS_END){
+            MenuController._instance.gameObject.SetActive(true);
 
-        
+            MenuController._instance.UpdateScore(totalScore);
+
+        }
+ 
     }
 
 
