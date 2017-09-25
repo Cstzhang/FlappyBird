@@ -27,7 +27,7 @@ public class PipeController : MonoBehaviour {
         if(other.tag == "Player"){
 
             GameManager._intance.totalScore++;
-
+            this.GetComponent<AudioSource>().Play();
         }
 
         

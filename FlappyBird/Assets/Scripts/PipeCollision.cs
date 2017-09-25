@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class PipeCollision : MonoBehaviour {
-
+    public AudioSource hitMusic;
+	public AudioSource dieMusic;
 	// Use this for initialization
 	void Start () {
 	
@@ -22,6 +23,9 @@ public class PipeCollision : MonoBehaviour {
 
 			GameManager._intance.GameStatus = GameManager.GAMESTATUS_END;
 
+            //this.GetComponent<AudioSource>().Play();
+            hitMusic.Play();
+            dieMusic.Play();
 		}
 	}
 

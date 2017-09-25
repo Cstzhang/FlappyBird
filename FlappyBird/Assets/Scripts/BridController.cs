@@ -39,7 +39,7 @@ public class BridController : MonoBehaviour {
 
         }
 
-
+        //点击 飞行跳跃
         if(GameManager._intance.GameStatus == GameManager.GAMESTATUS_PLAYING){
 
 			//control jump
@@ -48,6 +48,8 @@ public class BridController : MonoBehaviour {
 				Vector3 vel2 = this.GetComponent<Rigidbody>().velocity;
 				// 加一个向上的速度
 				this.GetComponent<Rigidbody>().velocity = new Vector3(vel2.x, 5, vel2.z);
+                //播放声音
+                this.GetComponent<AudioSource>().Play();
 			};
 
         }
